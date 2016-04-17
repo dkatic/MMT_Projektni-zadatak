@@ -442,6 +442,17 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
 }
+
+.photo-wrapper-1 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 0.8s;
+  -moz-transition: background-color 0.8s;
+  -o-transition: background-color 0.8s;
+  transition: background-color 0.8s;
+}
+
 .project .overlay {
   position: absolute;
   text-align: center;
@@ -455,7 +466,18 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.project:hover .photo-wrapper {
+.project:hover .photo-wrapper{
+  background-color: #2f2f2f;
+	background-image:url(../img/zoom.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: relative;
+}
+.project:hover .photo-wrapper-1{
   background-color: #2f2f2f;
 	background-image:url(../img/zoom.png);
 	background-repeat:no-repeat;
@@ -471,6 +493,12 @@ h1, h2, h3, h4, h5, h6 {
   filter: alpha(opacity=4000);
   opacity: 0.1;
   filter: alpha(opacity=40);
+}
+.project:hover .photo-1 {
+  opacity: 10;
+  filter: alpha(opacity=4000);
+  opacity: 0.6;
+  filter: alpha(opacity=120);
 }
 .project:hover .overlay {
   opacity: 100;
