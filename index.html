@@ -222,17 +222,12 @@
 
           $(window).scroll(function() {
             $("iframe").each( function() {
-                var docViewTop = $(window).scrollTop();
-			          var docViewBottom = docViewTop + $(window).height();
-
-                var elemTop = $(this).offset().top;
-			          var elemBottom = elemTop + $(this).height();
-                if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
-			{
+                if( $(window).scrollTop() > $(this).offset().top - 200 ) {
+                    $(this).css('opacity',1);
                     player.playVideo();
-                }
-                else {
-                    player.pauseVideo();
+                } else {
+                    $(this).css('opacity',0);
+                    player.stopVideo();
                 }
             });
         });
@@ -292,7 +287,7 @@
 
 			<div class="row">
         <h1>VALENTINOVA DJELATNOST</h1>
-        <h1><a href="https://hr.wikipedia.org/wiki/Android_%28operacijski_sustav%29" target="_blank">Android developer </a></h1>
+        <h1><a href="neka stranica" target="_blank">Android developer </a></h1>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 					<div class="project-wrapper">
 	                    <div class="project">
@@ -337,24 +332,17 @@
 				<div class="col-lg-4 proc">
 					<i class="fa fa-question"></i>
 					<h3>Što je Android?</h3>
-					<p>Google Android je prvi otvoreni operacijski sustav za mobilne uređaje pokrenut od strane <a href="https://www.google.com/about/company/">Google Inc.</a> i vođen od strane <a href="http://www.openhandsetalliance.com/">Open Handset Alliance</a> - grupe koja danas broji preko 80 tehnoloških kompanija čiji je cilj ubrzati inovacije na području mobilnih operacijskih sustava, a samim time ponuditi krajnjim kupcima bogatije, jeftinije i bolje iskustvo uporabe.</br>
-          Android je modularan i prilagodljiv pa tako postoje slučajevi njegovog prenošenja (portanja) na razne uređaje kao što su čitači elektronskih knjiga, mobilni telefoni, prijenosnici, te multimedijski playeri.
-          </p>
+					<p>Google Android je prvi otvoreni operacijski sustav za mobilne uređaje pokrenut od strane Google Inc. u listopadu 2003.</p>
 				</div>
 				<div class="col-lg-4 proc">
-					<i class="fa fa-android"></i>
-					<h3>Zašto Android?</h3>
-					<p>Android platforma je otvorenog koda (cijeli Android izvorni kod se može pregledati, doduše uz neki vlasnički softver kao što je <a href="https://play.google.com/store">Google Play</a>), što čini razvojna okruženja dinamičnim i kolektivno obogaćavajućim.</br>
-          Android programeri dijele savjete, trikove i vodiče (tutoriale) u cijeloj Android zajednici, a otkako Google pomaže programerima izgradnjom <a href="https://play.google.com/store">Google Play</a> usluga za uobičajene zadatke aplikacije, programeri se mogu usredotočiti na srž njihove aplikacije.
-          </p>
-				</div>
-				<div class="col-lg-4 proc">
-					<i class="fa fa-sitemap"></i>
+					<i class="fa fa-location-arrow"></i>
 					<h3>Rasprostranjenost Androida</h3>
-					<p>Na posljednjoj <a href="https://www.google.com/press/">Google Nexus pressici</a> je objavljeno kako je danas aktivno više od 1.4 milion Android uređaja na cijelom svijetu čime je neosporno vođa na globalnom udjelu tržišta smartphone-a.</br>
-            Mobilne aplikacije su u povećanoj potražnji nego ikada prije, što čini sada nevjerojatno vrijeme za pokretanje karijere kao Android developera. </br>
-            Kako se Android širi izvan potrošačkog prostora za rad i obrazovanje, te gura granice bogatstvom različitosti uređaja, posebno je uzbudljivo vrijeme za zaroniti u svijet Android programiranja.
-          </p>
+					<p>Na posljednjoj Google Nexus pressici je objavljeno kako je danas aktivno više od 1.4 milion Android uređaja na cijelom svijetu.</p>
+				</div>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-coffee"></i>
+					<h3>JAVA</h3>
+					<p>Objektno-orijentirani programski jezik na kojem se temelji programiranje za android uređaje.</br>Danas jedan od najkorištenijih programskih jezika.</p>
 				</div>
       </div><! --/row -->
 
@@ -362,32 +350,27 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-lg-8-offset-2 centered">
-    					<h1>Što me dijeli od željene djelatnosti?</h1>
+    					<h1>Što me još dijeli od željene djelatnosti?</h1>
     					<h3>Per Aspera ad Astra!</h3>
     					<p>Bez ciljeva i planova kako ih doseći, vi ste poput broda koji jedri bez odredišta.</p>
     				</div><!-- /col-lg-8 -->
     			</div><! --/row -->
           <div class="row mt">
-    				<div class="col-lg-1 service">
-
+    				<div class="col-lg-3 service">
+    					<i class="fa fa-star"></i><p>PREMIUM QUALITY<br/><small>LOREM IPSUM DOLOR</small></p>
+    					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
     				</div>
-    				<div class="col-lg-5 service">
-    					<i class="fa fa-gear fa-spin"></i><p class="info">UPOZNAVANJE S NOVIM JEZICIMA I ALATIMA</p>
-    					<p class="text"><b>Java</b> - Kako bi bio uspješan progamer, moraš biti upoznat s Java konceptima kao što su petlje, liste, varijable i kontrolne strukture.</br>
-              <b>SQL</b> - Također je potrebno poznavanje osnova SQL-a kako bi se mogle organizirati baze podataka unutar aplikacije.</br>
-              <b>Android SDK</b> - Besplatni alati za razvoj Android aplikacija. Sadrži uzorak koda, softverske knjižnice, alate za kodiranje i još mnogo toga.</br>
-              <b>XML</b> - Programeri koriste XML za opisivanje podataka. Osnove XML sintakse će biti od pomoći u vašem putovanju do punopravnog Android developera.
-            </p>
+    				<div class="col-lg-3 service">
+    					<i class="fa fa-cloud"></i><p>CLOUD SERVICES<br/><small>LOREM IPSUM DOLOR</small></p>
+    					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
     				</div>
-    				<div class="col-lg-5 service">
-    					<i class="fa fa-gear fa-spin"></i><p class="info">UNAPREĐENJE OSOBNE UČINKOVITOSTI</p>
-    					<p class="text"><b>Ustrajnost</b> - Praksa je jako bitna u svijetu programiranja. Neizbježno, naići ćeš na zapreke u procesu progarmiranja, pogotovo pri početku. Trebat ćeš visoku dozu ustrajnosti kako bi te vodila kroz frustirajuće puteve.</br>
-              <b>Suradnja</b> - Od vitalne je važnosti za većinu razvojnih radnih mjesta. Morate početi biti komforni s dobivanjem povratne informacije o svom radu, i udruživanjem s drugima kako bi stvorili iznimne proizvode.</br>
-              <b>Želja za znanjem</b> - Svi dobri programeri se zalažu za cjeloživotno učenje. Pogotovo u ubrzanoj prirodi širenja aplikacija. Koliko god ste napredni postali, nećete prestati s istraživanjem, upozavanjem, igranjem okolo i postavljanjem pitanja.
-              </p>
+    				<div class="col-lg-3 service">
+    					<i class="fa fa-shield"></i><p>SECURED ACCOUNTS<br/><small>LOREM IPSUM DOLOR</small></p>
+    					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
     				</div>
-    				<div class="col-lg-1 service">
-
+    				<div class="col-lg-3 service">
+    					<i class="fa fa-heart"></i><p>100% SATISFACTION<br/><small>LOREM IPSUM DOLOR</small></p>
+    					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
     				</div>
     			</div><! --/row -->
         </div><! --/container -->
