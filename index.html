@@ -17,6 +17,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/css/popup.css" rel="stylesheet">
 
   </head>
 
@@ -182,7 +183,7 @@
         <div class="col-lg-4 proc">
           <i class="fa fa-cogs"></i>
           <h3>..ideje</h3>
-          <p>Klijent izrazi želju, tu nastupaju dizajeneri sa svojim idejama. Ideje se šalju klijentu na odobravanje, nakon što klijent odobri dizajn kreće kodiranj ei dizajniranje stranice.</p>
+          <p>Klijent izrazi želju, tu nastupaju dizajneri sa svojim idejama. Ideje se šalju klijentu na odobravanje, nakon što klijent odobri dizajn kreće kodiranje i dizajniranje stranice.</p>
         </div>
         <div class="col-lg-4 proc">
           <i class="fa fa-globe"></i>
@@ -191,63 +192,63 @@
         </div>
       </div><! --/row --></br></br>
 
-    <!-- Video -->
-<div align="center">
-    <html><head>
-        <style>
-        #e1, #  ytplayer{
-            height:360px; width:640px; display: block;
-            opacity: 0;
-        }
-        </style>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
+      <!-- Video -->
+      <div align="center">
+          <html><head>
+              <style>
+              #e1, #  ytplayer{
+                  height:360px; width:640px; display: block;
+                  opacity: 0;
+              }
+              </style>
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+              <script>
 
-          var tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/player_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-          var player;
-          function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytplayer', {
-              height: '360',
-              width: '640',
-              playerVars : {
-                    autoplay : 0
-                },
-              videoId: 'elpasjfr20M'
-            });
-          }
-
-          $(window).scroll(function() {
-            $("iframe").each( function() {
-                var docViewTop = $(window).scrollTop();
-             var docViewBottom = docViewTop + $(window).height();
-
-                var elemTop = $(this).offset().top;
-             var elemBottom = elemTop + $(this).height();
-                if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
-   {
-                    player.playVideo();
+                var player;
+                function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '640',
+                    playerVars : {
+                          autoplay : 0
+                      },
+                    videoId: 'elpasjfr20M'
+                  });
                 }
-                else {
-                    player.pauseVideo();
-                }
-            });
-        });
 
-        </script>
-        </head>
-        <body>
+                $(window).scroll(function() {
+                  $("iframe").each( function() {
+                      var docViewTop = $(window).scrollTop();
+                   var docViewBottom = docViewTop + $(window).height();
 
-        <div id="ytplayer"></div>
+                      var elemTop = $(this).offset().top;
+                   var elemBottom = elemTop + $(this).height();
+                      if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
+         {
+                          player.playVideo();
+                      }
+                      else {
+                          player.pauseVideo();
+                      }
+                  });
+              });
 
-        </body>
-        </html>
+              </script>
+              </head>
+              <body>
 
-    </div>
-<!-- END VIDEO -->
+              <div id="ytplayer"></div>
+
+              </body>
+              </html>
+
+          </div>
+      <!-- END VIDEO -->
 
     	<div id="servicewrap">
     		<div class="container">
@@ -279,7 +280,11 @@
         </div><! --/container -->
       </div><! --/servicewrap -->
 
+<<<<<<< HEAD
       <h1><a href="assets\drugi\drugi_izbor_david.html" target="_blank">DRUGI IZBOR</br>(FOTOGRAF)</a></h1><br/><br/><br/>
+=======
+      <h1><a class="btn2" data-popup-open="popup-1" href="#">DRUGI IZBOR</br>(FOTOGRAF)</a></h1>
+>>>>>>> origin/master
 
 
   	</div><! --/container -->
@@ -351,7 +356,7 @@
 				<div class="col-lg-4 proc">
 					<i class="fa fa-sitemap"></i>
 					<h3>Rasprostranjenost Androida</h3>
-					<p>Na posljednjoj <a href="https://www.google.com/press/">Google Nexus pressici</a> je objavljeno kako je danas aktivno više od 1.4 milion Android uređaja na cijelom svijetu čime je neosporno vođa na globalnom udjelu tržišta smartphone-a.</br>
+					<p>Na posljednjoj <a href="https://www.google.com/press/">Google Nexus pressici</a> je objavljeno kako je danas aktivno više od 1.4 milijardi Android uređaja na cijelom svijetu čime je neosporno vođa na globalnom udjelu tržišta smartphone-a.</br>
             Mobilne aplikacije su u povećanoj potražnji nego ikada prije, što čini sada nevjerojatno vrijeme za pokretanje karijere kao Android developera. </br>
             Kako se Android širi izvan potrošačkog prostora za rad i obrazovanje, te gura granice bogatstvom različitosti uređaja, posebno je uzbudljivo vrijeme za zaroniti u svijet Android programiranja.
           </p>
@@ -372,7 +377,7 @@
 
     				</div>
     				<div class="col-lg-5 service">
-    					<i class="fa fa-gear fa-spin"></i><p class="info">UPOZNAVANJE S NOVIM JEZICIMA I ALATIMA</p>
+    					<i class="fa fa-cogs"></i><p class="info">UPOZNAVANJE S NOVIM JEZICIMA I ALATIMA</p>
     					<p class="text"><b>Java</b> - Kako bi bio uspješan progamer, moraš biti upoznat s Java konceptima kao što su petlje, liste, varijable i kontrolne strukture.</br>
               <b>SQL</b> - Također je potrebno poznavanje osnova SQL-a kako bi se mogle organizirati baze podataka unutar aplikacije.</br>
               <b>Android SDK</b> - Besplatni alati za razvoj Android aplikacija. Sadrži uzorak koda, softverske knjižnice, alate za kodiranje i još mnogo toga.</br>
@@ -380,7 +385,7 @@
             </p>
     				</div>
     				<div class="col-lg-5 service">
-    					<i class="fa fa-gear fa-spin"></i><p class="info">UNAPREĐENJE OSOBNE UČINKOVITOSTI</p>
+    					<i class="fa fa-group"></i><p class="info">UNAPREĐENJE OSOBNE UČINKOVITOSTI</p>
     					<p class="text"><b>Ustrajnost</b> - Praksa je jako bitna u svijetu programiranja. Neizbježno, naići ćeš na zapreke u procesu progarmiranja, pogotovo pri početku. Trebat ćeš visoku dozu ustrajnosti kako bi te vodila kroz frustirajuće puteve.</br>
               <b>Suradnja</b> - Od vitalne je važnosti za većinu razvojnih radnih mjesta. Morate početi biti komforni s dobivanjem povratne informacije o svom radu, i udruživanjem s drugima kako bi stvorili iznimne proizvode.</br>
               <b>Želja za znanjem</b> - Svi dobri programeri se zalažu za cjeloživotno učenje. Pogotovo u ubrzanoj prirodi širenja aplikacija. Koliko god ste napredni postali, nećete prestati s istraživanjem, upozavanjem, igranjem okolo i postavljanjem pitanja.
@@ -393,11 +398,34 @@
         </div><! --/container -->
       </div><! --/servicewrap -->
 
-      <h1><a href="assets/drugi/drugi_izbor_valentin.html" target="_blank">DRUGI IZBOR</br>VALENTIN</a></h1>
+    <h1><a class="btn2" data-popup-open="popup-2" href="#">DRUGI IZBOR VALENTIN</a></h1>
+
+      <! --DODATNE DJELATNOST-->
+
+      <div class="popup" data-popup="popup-1">
+          <div class="popup-inner">
+              <h2>Wow! Davidov popup! (Popup #1)</h2>
+              <p>Donec in volutpat nisi. In quam lectus, aliquet rhoncus cursus a, congue et arcu. Vestibulum tincidunt neque id nisi pulvinar aliquam. Nulla luctus luctus ipsum at ultricies. Nullam nec velit dui. Nullam sem eros, pulvinar sed pellentesque ac, feugiat et turpis. Donec gravida ipsum cursus massa malesuada tincidunt. Nullam finibus nunc mauris, quis semper neque ultrices in. Ut ac risus eget eros imperdiet posuere nec eu lectus.</p>
+              <p><a data-popup-close="popup-1" href="#">Close</a></p>
+              <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+          </div>
+      </div>
+
+      <div class="popup" data-popup="popup-2">
+          <div class="popup-inner">
+              <h2>Wow! Valentinov popup! (Popup #1)</h2>
+              <p>Donec in volutpat nisi. In quam lectus, aliquet rhoncus cursus a, congue et arcu. Vestibulum tincidunt neque id nisi pulvinar aliquam. Nulla luctus luctus ipsum at ultricies. Nullam nec velit dui. Nullam sem eros, pulvinar sed pellentesque ac, feugiat et turpis. Donec gravida ipsum cursus massa malesuada tincidunt. Nullam finibus nunc mauris, quis semper neque ultrices in. Ut ac risus eget eros imperdiet posuere nec eu lectus.</p>
+              <p><a data-popup-close="popup-2" href="#">Close</a></p>
+              <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+          </div>
+      </div>
+      <! --/DODATNE DJELATNOSTI-->
 
     </div><! --/container -->
 
 	</div><! --/Portfoliowrap -->
+
+
 
 	<! -- CONTACT SEPARATOR -->
 	<div class="sep contact" data-stellar-background-ratio="0.5"></div>
@@ -436,6 +464,7 @@
   <! --scripts-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="assets/js/anything-popup.js"></script>
+   <script src="assets/js/popup.js"></script>
 	 <script src="assets/js/classie.js"></script>
    <script src="assets/js/bootstrap.min.js"></script>
    <script src="assets/js/smoothscroll.js"></script>

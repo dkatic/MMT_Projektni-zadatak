@@ -375,7 +375,7 @@ vertical-align: bottom;
 #servicewrap {
 	display: block;
 	margin-top: 20px;
-	margin-bottom: 80px;
+
 }
 
 #servicewrap h1 {
@@ -429,7 +429,9 @@ vertical-align: bottom;
 }
 
 .contact {
-	background-image: url(../img/contact-sep.jpg);
+	background-image: url('../img/contact-sep.jpg');
+  z-index: -1;
+  will-change: transform;
 }
 
 #contactwrap label {
