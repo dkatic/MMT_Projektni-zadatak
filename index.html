@@ -17,6 +17,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/css/popup.css" rel="stylesheet">
 
   </head>
 
@@ -191,63 +192,63 @@
         </div>
       </div><! --/row --></br></br>
 
-    <!-- Video -->
-<div align="center">
-    <html><head>
-        <style>
-        #e1, #  ytplayer{
-            height:360px; width:640px; display: block;
-            opacity: 0;
-        }
-        </style>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
+      <!-- Video -->
+      <div align="center">
+          <html><head>
+              <style>
+              #e1, #  ytplayer{
+                  height:360px; width:640px; display: block;
+                  opacity: 0;
+              }
+              </style>
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+              <script>
 
-          var tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/player_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-          var player;
-          function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytplayer', {
-              height: '360',
-              width: '640',
-              playerVars : {
-                    autoplay : 0
-                },
-              videoId: 'elpasjfr20M'
-            });
-          }
-
-          $(window).scroll(function() {
-            $("iframe").each( function() {
-                var docViewTop = $(window).scrollTop();
-             var docViewBottom = docViewTop + $(window).height();
-
-                var elemTop = $(this).offset().top;
-             var elemBottom = elemTop + $(this).height();
-                if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
-   {
-                    player.playVideo();
+                var player;
+                function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '640',
+                    playerVars : {
+                          autoplay : 0
+                      },
+                    videoId: 'elpasjfr20M'
+                  });
                 }
-                else {
-                    player.pauseVideo();
-                }
-            });
-        });
 
-        </script>
-        </head>
-        <body>
+                $(window).scroll(function() {
+                  $("iframe").each( function() {
+                      var docViewTop = $(window).scrollTop();
+                   var docViewBottom = docViewTop + $(window).height();
 
-        <div id="ytplayer"></div>
+                      var elemTop = $(this).offset().top;
+                   var elemBottom = elemTop + $(this).height();
+                      if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
+         {
+                          player.playVideo();
+                      }
+                      else {
+                          player.pauseVideo();
+                      }
+                  });
+              });
 
-        </body>
-        </html>
+              </script>
+              </head>
+              <body>
 
-    </div>
-<!-- END VIDEO -->
+              <div id="ytplayer"></div>
+
+              </body>
+              </html>
+
+          </div>
+      <!-- END VIDEO -->
 
     	<div id="servicewrap">
     		<div class="container">
@@ -279,7 +280,7 @@
         </div><! --/container -->
       </div><! --/servicewrap -->
 
-      <h1><a href="http://mrav.ffzg.hr/zanimanja/book/part2/node1702.htm" target="_blank">DRUGI IZBOR</br>(FOTOGRAF)</a></h1><br/><br/><br/>
+      <h1><a class="btn2" data-popup-open="popup-1" href="#">DRUGI IZBOR</br>(FOTOGRAF)</a></h1>
 
 
   	</div><! --/container -->
@@ -393,11 +394,34 @@
         </div><! --/container -->
       </div><! --/servicewrap -->
 
-      <h1><a href="assets/drugi/drugi_izbor_valentin.html" target="_blank">DRUGI IZBOR</br>VALENTIN</a></h1>
+    <h1><a class="btn2" data-popup-open="popup-2" href="#">DRUGI IZBOR VALENTIN</a></h1>
+
+      <! --DODATNE DJELATNOST-->
+
+      <div class="popup" data-popup="popup-1">
+          <div class="popup-inner">
+              <h2>Wow! Davidov popup! (Popup #1)</h2>
+              <p>Donec in volutpat nisi. In quam lectus, aliquet rhoncus cursus a, congue et arcu. Vestibulum tincidunt neque id nisi pulvinar aliquam. Nulla luctus luctus ipsum at ultricies. Nullam nec velit dui. Nullam sem eros, pulvinar sed pellentesque ac, feugiat et turpis. Donec gravida ipsum cursus massa malesuada tincidunt. Nullam finibus nunc mauris, quis semper neque ultrices in. Ut ac risus eget eros imperdiet posuere nec eu lectus.</p>
+              <p><a data-popup-close="popup-1" href="#">Close</a></p>
+              <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+          </div>
+      </div>
+
+      <div class="popup" data-popup="popup-2">
+          <div class="popup-inner">
+              <h2>Wow! Valentinov popup! (Popup #1)</h2>
+              <p>Donec in volutpat nisi. In quam lectus, aliquet rhoncus cursus a, congue et arcu. Vestibulum tincidunt neque id nisi pulvinar aliquam. Nulla luctus luctus ipsum at ultricies. Nullam nec velit dui. Nullam sem eros, pulvinar sed pellentesque ac, feugiat et turpis. Donec gravida ipsum cursus massa malesuada tincidunt. Nullam finibus nunc mauris, quis semper neque ultrices in. Ut ac risus eget eros imperdiet posuere nec eu lectus.</p>
+              <p><a data-popup-close="popup-2" href="#">Close</a></p>
+              <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+          </div>
+      </div>
+      <! --/DODATNE DJELATNOSTI-->
 
     </div><! --/container -->
 
 	</div><! --/Portfoliowrap -->
+
+
 
 	<! -- CONTACT SEPARATOR -->
 	<div class="sep contact" data-stellar-background-ratio="0.5"></div>
@@ -436,6 +460,7 @@
   <! --scripts-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="assets/js/anything-popup.js"></script>
+   <script src="assets/js/popup.js"></script>
 	 <script src="assets/js/classie.js"></script>
    <script src="assets/js/bootstrap.min.js"></script>
    <script src="assets/js/smoothscroll.js"></script>
