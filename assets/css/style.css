@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 #portfoliowrap h1 {
 	font-weight: 300;
 	text-align: center;
-	margin-bottom: 50px;
+
 }
 .mt {
 	margin-top: 50px;
@@ -364,10 +364,15 @@ h1, h2, h3, h4, h5, h6 {
 	background-image: url(../img/portfolio-sep.png);
 }
 
+.portfolio2{
+  background-image: url(../img/portfolio-sep-sec.png);
+  margin-bottom:50px;
+}
+
 /* Service Wrap */
 #servicewrap {
 	display: block;
-	margin-top: 80px;
+	margin-top: 20px;
 	margin-bottom: 80px;
 }
 
