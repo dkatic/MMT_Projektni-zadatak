@@ -1,6 +1,7 @@
 
 
 
+
 /* ==========================================================================
    Base Styles, Bootstrap Modifications & Fonts Import
    ========================================================================== */
@@ -362,10 +363,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio {
 	background-image: url(../img/portfolio-sep.png);
-}
-
-.portfolio2{
-  background-image: url(../img/portfolio-sep-sec.png);
   margin-bottom:50px;
 }
 
