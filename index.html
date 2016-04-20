@@ -222,12 +222,17 @@
 
           $(window).scroll(function() {
             $("iframe").each( function() {
-                if( $(window).scrollTop() > $(this).offset().top - 200 ) {
-                    $(this).css('opacity',1);
+                var docViewTop = $(window).scrollTop();
+             var docViewBottom = docViewTop + $(window).height();
+
+                var elemTop = $(this).offset().top;
+             var elemBottom = elemTop + $(this).height();
+                if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
+   {
                     player.playVideo();
-                } else {
-                    $(this).css('opacity',0);
-                    player.stopVideo();
+                }
+                else {
+                    player.pauseVideo();
                 }
             });
         });
