@@ -201,7 +201,7 @@
       <div align="center">
           <html><head>
               <style>
-              #e1, #  ytplayer{
+              # ytplayer{
                   height:360px; width:640px; display: block;
                   opacity: 0;
               }
@@ -235,7 +235,7 @@
                    var elemBottom = elemTop + $(this).height();
                       if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
          {
-                          player.playVideo();
+                          player.playVideo();player.mute();
                       }
                       else {
                           player.pauseVideo();
@@ -366,6 +366,8 @@
 				</div>
       </div><! --/row -->
 
+      <h1><a class="btn2" data-popup-open="popup-3" href="#">Android Tutorial YouTube video</a></h1>
+
     	<div id="servicewrap">
     		<div class="container">
     			<div class="row">
@@ -424,8 +426,16 @@
               On nastoji osigurati da se vrijeme neprekidnog rada (uptime), performanse, resursi i sigurnost računala kojima on upravlja zadovoljavaju potrebe korisnika, bez prekoračenja proračuna.</br>
               Kako bi zadovoljili te potrebe, administrator sustava može steći, instalirati ili nadograditi komponente računala i softvera, osigurati rutinske automatizacije, trenirati i/ili nadzirati osoblje, ili ponuditi tehničku podršku za projekte.
               </p>
-              <p><a data-popup-close="popup-2" href="#">Close</a></p>
+              <p><a data-popup-close="popup-2" href="#">Zatvori</a></p>
               <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+          </div>
+      </div>
+
+      <div class="popup" data-popup="popup-3">
+          <div class="popup-inner">
+              <iframe width="640" height="360" src="https://www.youtube.com/embed/Z149x12sXsw?rel=0" frameborder="0" allowfullscreen></iframe>
+              <p><a data-popup-close="popup-3" href="#">Zatvori</a></p>
+              <a class="popup-close" data-popup-close="popup-3" href="#">x</a>
           </div>
       </div>
       <! --/DODATNE DJELATNOSTI-->
